@@ -8,25 +8,37 @@
 .box input {
   width: 100%;
   max-width: 638px;
+
   padding: 1.6rem;
+
   background: var(--gray-500);
+
   border: 1px solid var(--gray-700);
   border-radius: 8px;
+
   font-size: 1.6rem;
+
+  color: var(--gray-100);
+}
+
+.box input:focus {
+  outline: none;
+  border-color: var(--purple-400);
 }
 
 .box button {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
+
   width: 100%;
   max-width: 90px;
 
   border: none;
   border-radius: 8px;
 
-  padding: 16px;
+  padding: 12px;
   font-size: 1.4rem;
 
   color: var(--gray-100);

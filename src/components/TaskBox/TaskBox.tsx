@@ -2,15 +2,25 @@ import style from './TaskBox.module.css'
 import { BiCircle, BiTrash } from 'react-icons/bi'
 import {AiFillCheckCircle} from 'react-icons/ai'
 
-export const TaskBox = () => {
+interface TaskBoxProps {
+  done:boolean;
+  content: string;
+}
+
+export const TaskBox = ({done, content}:TaskBoxProps) => {
   return(
     <article className={style.article}>
-      <button >
-        <BiCircle size={18}/>
+      <button className={done ? style.active: ''}>
+        {done ? 
+          <AiFillCheckCircle size={18}/> 
+          : 
+          <BiCircle size={18}/>
+        }
+        
       </button>
 
-      <p >
-        Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
+      <p className={done ? style.active: ''}>
+        {content}
       </p>
 
 

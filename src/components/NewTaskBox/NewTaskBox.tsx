@@ -1,13 +1,38 @@
 import styled from './NewTaskBox.module.css'
+
 import { AiOutlinePlusCircle } from'react-icons/ai'
-export const NewTaskBox = () => {
+
+import { ChangeEvent, useState } from 'react'
+
+
+interface NewTaskProps {
+  create:(value: string) => void;
+}
+
+
+export const NewTaskBox = ({create}:NewTaskProps) => {
+  const [newTask, setNewTask] = useState('')
+
+  const handleWriteTask = (e:ChangeEvent<HTMLInputElement>) => {
+    setNewTask(e.target.value)
+  }
+
+  const handleCreate = () =>{
+    create(newTask)
+  }
+
   return(
     <div className={styled.box}>
-      <input type="text" placeholder='Adicione uma nova tarefa' />
-      <button>
+      <input 
+        type="text" 
+        placeholder='Adicione uma nova tarefa' 
+        onChange={handleWriteTask}
+        value={newTask}
+        />
+      <button onClick={handleCreate}>
         Criar
         <AiOutlinePlusCircle
-        size={16}
+        size={18}
         />
       </button>
     </div>
