@@ -40,3 +40,12 @@
 
   margin-left: 5px;
 }
+
+@media (max-width: 768px) {
+  * {
+    font-size: 60%;
+  }
+  .main {
+    padding: 0 1.6rem;
+  }
+}
