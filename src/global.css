@@ -1,6 +1,8 @@
 :root {
   --white: #fff;
 
+  --red: #e25858;
+
   --purple-200: #8284fa;
   --purple-400: #5e60ce;
 
@@ -26,6 +28,7 @@
 
 body {
   background: var(--gray-600);
+
   -webit-font-smoothing: antialiased;
 }
 

@@ -2,3 +2,41 @@
   max-width: 736px;
   margin: -2.7rem auto;
 }
+
+.content {
+  width: 100%;
+  margin-top: 6.4rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 12px;
+}
+
+.header p {
+  font-size: 1.4rem;
+  line-height: 17px;
+  font-weight: 700;
+}
+
+.header p:first-child {
+  color: var(--blue-200);
+}
+
+.header p:last-child {
+  color: var(--purple-200);
+}
+
+.header span {
+  font-size: 1.2rem;
+
+  color: var(--gray-200);
+  line-height: 15px;
+  background: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 8px;
+
+  margin-left: 5px;
+}
