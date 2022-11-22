@@ -1,0 +1,44 @@
+.box {
+  width: 100%;
+
+  display: flex;
+  gap: 8px;
+}
+
+.box input {
+  width: 100%;
+  max-width: 638px;
+  padding: 1.6rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-700);
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+.box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 90px;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 16px;
+  font-size: 1.4rem;
+
+  color: var(--gray-100);
+  font-weight: 700;
+
+  background: var(--blue-400);
+
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.box button:hover {
+  background: var(--blue-200);
+}
