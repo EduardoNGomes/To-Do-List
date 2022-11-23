@@ -19,6 +19,7 @@ export const NewTaskBox = ({create}:NewTaskProps) => {
 
   const handleCreate = () =>{
     create(newTask)
+    setNewTask('')
   }
 
   return(
