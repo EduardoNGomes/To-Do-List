@@ -5,6 +5,7 @@ import { TaskBox } from '../TaskBox/TaskBox'
 
 import { useEffect, useState } from 'react'
 import {v4 as uuidv4} from 'uuid';
+import { EmptyScreen } from '../EmptyScreen/EmptyScreen';
 
 
 interface TaskProps{
@@ -23,7 +24,7 @@ export const Main = () => {
       return []
     }
   })
-  const [taskDone, setTaskDone] = useState(0)
+  const [allTaskDone, setAllTaskDone] = useState(0)
   
 
   const createNewTask = (value:string) => {
@@ -53,8 +54,8 @@ export const Main = () => {
   }
 
   useEffect(()=>{
-    const task = allTask.filter(task => task.done ===true)
-    setTaskDone(task.length)
+    const taskDone = allTask.filter(task => task.done === true)
+    setAllTaskDone(taskDone.length)
   },[allTask])
 
 
@@ -71,10 +72,14 @@ export const Main = () => {
       <div className={style.content}>
         <div className={style.header}>
           <p>Tarefas criadas <span>{allTask.length}</span> </p>
-          <p>Concluidas <span>{taskDone} de {allTask.length}</span> </p>
+          <p>Concluidas <span>{allTaskDone} de {allTask.length}</span> </p>
         </div>
 
-        {allTask &&
+        {
+        allTask.length == 0 ?
+          <EmptyScreen/>
+        :
+          allTask &&
 
           allTask.map(task => 
             <TaskBox

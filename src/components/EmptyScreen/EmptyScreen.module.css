@@ -1,0 +1,28 @@
+.emptyScreen {
+  width: 100%;
+  padding-top: 6.4rem;
+
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emptyScreen img {
+  width: 56px;
+  margin-bottom: 1.6rem;
+}
+
+.emptyScreen p {
+  color: var(--gray-300);
+  font-size: 1.6rem;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.emptyScreen p:last-child {
+  font-weight: 400;
+}
